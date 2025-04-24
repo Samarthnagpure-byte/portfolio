@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Samarth Nagpure</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .contact-form {
+      max-width: 400px;
+      margin: 30px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      background: #f9f9f9;
+    }
+    .contact-form h2 {
+      text-align: center;
+    }
+    .contact-form label {
+      display: block;
+      margin-top: 10px;
+    }
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #aaa;
+    }
+    .contact-form button {
+      margin-top: 15px;
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background: #333;
+      color: white;
+      cursor: pointer;
+    }
+    .contact-form button:hover {
+      background: #555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Contact</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="skills.html">Skills</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contact">
+      <p>Email: <a href="mailto:samarthnagpure47@gmail.com">samarthnagpure47@gmail.com</a></p>
+      <p>Instagram: <a href="https://www.instagram.com/itx_samarth_56/?__pwa=1" target="_blank">@itx_samarth_56</a></p>
+      <P>linkedIn:  <a href="https://www.linkedin.com/in/samarth-nagpure-30943b259"  target="_blank"> Samarth Nagpure </a></P>
+      <P>GitHub:  <a href="https://github.com/Samarthnagpure-byte"  target="_blank"> Samarthnagpure-byte </a></P>
+
+
+    <section class="contact-form">
+      <h2>Send a Message</h2>
+      <form action="mailto:samarthnagpure47@gmail.com" method="POST" enctype="text/plain">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="Name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="Email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="Message" rows="5" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  
+</body>
+</html>
