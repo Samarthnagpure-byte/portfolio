@@ -1,49 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Projects - Samarth Nagpure</title>
-  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <header>
-    <h1>Projects</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
-      <a href="skills.html">Skills</a>
-      <a href="contact.html">Contact</a>
-      
+<body class="bg-gray-100 text-gray-800">
+  <header class="bg-white shadow p-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold">Samarth Nagpure</h1>
+    <nav class="space-x-4">
+      <a href="index.html" class="text-blue-500 hover:underline">Home</a>
+      <a href="projects.html" class="text-blue-500 hover:underline">Projects</a>
+      <a href="skills.html" class="text-blue-500 hover:underline">Skills</a>
+      <a href="contact.html" class="text-blue-500 hover:underline">Contact</a>
     </nav>
   </header>
-  <main>
-    <section class="projects">
-      <article>
-        <h2> Billing App  (for Windows)</h2>
-        <p>A Java Swing-based billing application for laptops, featuring a shopping cart, PDF invoice generation using the iText library, and input validation for user details.</p>
-        <P>Let’s try :  <a href="https://github.com/Samarthnagpure-byte"  target="_blank"> Download </a></P>
-        <h2>Random Password Maker (for Android)</h2>
-        <p>A Random Password Maker generates strong, unique passwords by randomly combining letters, numbers, and symbols. 
-          It helps enhance security by creating hard-to-guess passwords that can be customized in length and character set.
-           This tool ensures password uniqueness and prevents easy-to-guess patterns, improving online account security.</p>
-           <P>Let’s try :  <a href="https://github.com/Samarthnagpure-byte"  target="_blank"> Download </a></P>
-           <h2>To-Do-List (this is web app)</h2>
-           <P>A To-Do List is a simple tool used to organize tasks that need to be completed. 
-            It helps manage time, prioritize activities, and track progress by listing tasks in an orderly way—often with checkboxes to mark completed items.</P>
-            <P>Let’s try :  <a href="https://samarthnagpure-byte.github.io/To-do-list-/"  target="_blank"> Download </a></P>
-            <h2>portfolio web site</h2>
-            <P>A portfolio website is a digital showcase of work, skills, and experiences, 
-              designed to attract clients, employers, or collaborators with a 
-              visual and detailed presentation beyond a traditional resume.
-            </P>
-             <P>Let’s try :  <a href="https://samarthnagpure-byte.github.io/portfolio/"  target="_blank"> Download </a></P>
- 
 
-      </article>
-      
+  <main class="p-6 max-w-4xl mx-auto">
+    <section class="my-10">
+      <h2 class="text-3xl font-semibold text-center mb-6">Projects</h2>
+      <div class="space-y-8">
+        <div class="bg-white p-6 rounded-2xl shadow">
+          <h3 class="text-xl font-bold mb-2">Billing App (for Windows)</h3>
+          <p class="mb-2">A Java Swing-based billing application for laptops, featuring a shopping cart, PDF invoice generation using the iText library, and input validation for user details.</p>
+          <p>Let’s try: <a href="https://github.com/Samarthnagpure-byte" target="_blank" class="text-blue-500 hover:underline">Download</a></p>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl shadow">
+          <h3 class="text-xl font-bold mb-2">Random Password Maker (for Android)</h3>
+          <p class="mb-2">Generates strong, unique passwords by randomly combining letters, numbers, and symbols. Customizable length and characters for enhanced security.</p>
+          <p>Let’s try: <a href="https://github.com/Samarthnagpure-byte" target="_blank" class="text-blue-500 hover:underline">Download</a></p>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl shadow">
+          <h3 class="text-xl font-bold mb-2">To-Do List (Web App)</h3>
+          <p class="mb-2">A simple tool to manage and prioritize tasks with checkboxes for tracking progress.</p>
+          <p>Let’s try: <a href="https://samarthnagpure-byte.github.io/To-do-list-/" target="_blank" class="text-blue-500 hover:underline">Download</a></p>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl shadow">
+          <h3 class="text-xl font-bold mb-2">Portfolio Website</h3>
+          <p class="mb-2">A digital showcase of work, skills, and experience to attract clients, employers, or collaborators.</p>
+          <p>Let’s try: <a href="https://samarthnagpure-byte.github.io/portfolio/" target="_blank" class="text-blue-500 hover:underline">Download</a></p>
+        </div>
+      </div>
     </section>
   </main>
-  
+
+  <footer class="bg-white text-center p-4 mt-10 shadow-inner">
+    <p>© 2025 Samarth Nagpure</p>
+  </footer>
 </body>
 </html>
