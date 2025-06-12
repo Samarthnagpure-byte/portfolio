@@ -3,64 +3,177 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Projects - Samarth Nagpure</title>
+  <title>Projects - Samarth Nagpure | Software Developer</title>
+  
+  <link rel="icon" href="favicon.ico" type="image/x-icon"> 
+  
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .hover-underline-animation {
+      display: inline-block;
+      position: relative;
+      color: #3B82F6; /* blue-500 */
+    }
+
+    .hover-underline-animation::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: #3B82F6; /* blue-500 */
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+    }
+
+    .hover-underline-animation:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+
+    /* Simple button hover effect */
+    .btn-primary {
+      transition: background-color 0.3s ease;
+    }
+    .btn-primary:hover {
+      background-color: #2563EB; /* blue-700 */
+    }
+  </style>
 </head>
-<body class="bg-gray-100 text-gray-800">
-  <header class="bg-white shadow p-4 flex justify-between items-center">
-    <h1 class="text-2xl font-bold">Samarth Nagpure</h1>
-    <nav class="space-x-4">
-      <a href="index.html" class="text-blue-500 hover:underline">Home</a>
+<body class="bg-gray-100 text-gray-800 font-sans leading-relaxed">
+  <header class="bg-white shadow p-4 flex flex-col sm:flex-row justify-between items-center sticky top-0 z-10">
+    <h1 class="text-3xl font-extrabold text-gray-900 mb-2 sm:mb-0">
+      <a href="index.html" class="hover:text-blue-600 transition-colors duration-300">Samarth Nagpure</a>
+    </h1>
+    <nav class="space-x-4 sm:space-x-6" aria-label="Main Navigation">
+      <a href="index.html" class="text-blue-500 hover-underline-animation text-lg font-medium">Home</a>
+      <a href="projects.html" class="text-blue-700 font-bold hover-underline-animation text-lg font-medium border-b-2 border-blue-700">Projects</a>
       
-      <a href="skills.html" class="text-blue-500 hover:underline">Skills</a>
-      <a href="contact.html" class="text-blue-500 hover:underline">Contact</a>
+      <a href="contact.html" class="text-blue-500 hover-underline-animation text-lg font-medium">Contact</a>
     </nav>
   </header>
 
   <main class="p-6 max-w-4xl mx-auto">
-    <section class="my-10">
-      <h2 class="text-3xl font-semibold text-center mb-6">Projects</h2>
-      <div class="space-y-8">
+    <section class="my-10 py-8">
+      <h2 class="text-4xl font-extrabold text-center mb-10 text-gray-900 border-b-2 border-blue-300 pb-4">My Projects</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
         
-        <div class="bg-white p-6 rounded-2xl shadow">
-          <h3 class="text-xl font-bold mb-2">Random Password Maker (for Android)</h3>
-          <p class="mb-2">Generates strong, unique passwords by randomly combining letters, numbers, and symbols. Customizable length and characters for enhanced security.</p>
-          <p>Let’s try: <a href="https://samarthnagpure-byte.github.io/Password-maker/" target="_blank" class="text-blue-500 hover:underline">play</a></p>
-          <p>let's download: <a href="https://github.com/Samarthnagpure-byte/Password-maker" target="_blank" class="text-blue-500 hover:underline">Download</a></p>
-        </div>
+        <article class="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300">
+          <h3 class="text-2xl font-bold mb-3 text-gray-900">Billing App (for Windows)</h3>
+          <p class="mb-4 text-gray-700 leading-relaxed">A robust billing application developed using **Java Swing**, designed for efficient laptop sales management. Key features include:</p>
+          <ul class="list-disc list-inside text-gray-600 mb-4 space-y-1">
+            <li>Interactive **shopping cart** functionality.</li>
+            <li>**PDF invoice generation** utilizing the iText library.</li>
+            <li>Comprehensive **input validation** for accurate user and transaction details.</li>
+          </ul>
+          <div class="flex flex-wrap gap-3">
+            <a href="https://github.com/Samarthnagpure-byte/Billing-App" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover-underline-animation font-medium flex items-center">
+              <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.83 9.504.475.083.677-.217.677-.483 0-.237-.007-.866-.012-1.704-2.782.603-3.37-1.34-3.37-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.618.069-.607.069-.607 1.004.07 1.532 1.03 1.532 1.03.89 1.527 2.333 1.086 2.9.827.091-.645.35-1.086.635-1.337-2.22-.253-4.555-1.113-4.555-4.949 0-1.091.39-1.984 1.029-2.682-.103-.253-.446-1.27.098-2.65 0 0 .84-.268 2.75 1.025A9.096 9.096 0 0112 5.093c.85.004 1.7.11 2.493.324 1.909-1.293 2.747-1.025 2.747-1.025.546 1.38.202 2.398.099 2.65.64.698 1.028 1.591 1.028 2.682 0 3.844-2.339 4.693-4.566 4.941.359.307.678.915.678 1.848 0 1.337-.012 2.419-.012 2.747 0 .268.204.578.682.482C21.144 20.197 24 16.442 24 12.017 24 6.484 19.522 2 14 2z" clip-rule="evenodd"></path></svg>
+              GitHub Repo
+            </a>
+            </div>
+        </article>
 
-        <div class="bg-white p-6 rounded-2xl shadow">
-          <h3 class="text-xl font-bold mb-2">To-Do List (Web App)</h3>
-          <p class="mb-2">A simple tool to manage and prioritize tasks with checkboxes for tracking progress.</p>
-          <p>Let’s try: <a href="https://samarthnagpure-byte.github.io/To-do-list-/" target="_blank" class="text-blue-500 hover:underline">Download</a></p>
-        </div>
-        
-        <div class="bg-white p-6 rounded-2xl shadow">
-          <h3 class="text-xl font-bold mb-2">Tic-Tac-Toe</h3>
-          <p class="mb-2">**Tic-Tac-Toe** is a simple 2-player game where players take turns marking X or O on a 3×3 grid.
-               The first to align three of their marks horizontally, vertically, or diagonally wins. 
-               If all spots are filled without a winner, it’s a draw..</p>
-          <p>Let’s try: <a href="https://samarthnagpure-byte.github.io/Tic-Tac-Toe/" target="_blank" class="text-blue-500 hover:underline">Download</a></p>
-        </div>
+        <article class="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300">
+          <h3 class="text-2xl font-bold mb-3 text-gray-900">Random Password Maker (for Android)</h3>
+          <p class="mb-4 text-gray-700 leading-relaxed">An intuitive Android application designed to generate **strong, unique, and highly secure passwords**. It offers:</p>
+          <ul class="list-disc list-inside text-gray-600 mb-4 space-y-1">
+            <li>Random combination of **letters, numbers, and symbols**.</li>
+            <li>**Customizable password length** and character sets.</li>
+            <li>Focus on enhancing **digital security**.</li>
+          </ul>
+          <div class="flex flex-wrap gap-3">
+            <a href="https://samarthnagpure-byte.github.io/Password-maker/" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover-underline-animation font-medium flex items-center">
+                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M11 3a1 1 0 100 2h2.07l.386 1.157A2 2 0 0015.424 7H17a1 1 0 100-2h-1.581A4 4 0 0012 3H11zM10 5a1 1 0 100 2h1a1 1 0 100-2h-1zM6 7a1 1 0 100-2h.07A2 2 0 004.576 7H3a1 1 0 100 2h1.581A4 4 0 008 7H6zM5 9a1 1 0 100 2h.07A2 2 0 007.424 13H9a1 1 0 100-2H5zM15 9a1 1 0 100 2h-.07A2 2 0 0012.576 13H11a1 1 0 100-2h4zM10 13a1 1 0 100 2h1a1 1 0 100-2h-1zM6 15a1 1 0 100-2h.07A2 2 0 004.576 15H3a1 1 0 100 2h1.581A4 4 0 008 15H6zM15 15a1 1 0 100-2h-.07A2 2 0 0012.576 15H11a1 1 0 100-2h4zM10 17a1 1 0 100 2h1a1 1 0 100-2h-1z"></path></svg>
+                View Project
+            </a>
+             <a href="https://github.com/Samarthnagpure-byte/Password-maker" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover-underline-animation font-medium flex items-center">
+              <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.83 9.504.475.083.677-.217.677-.483 0-.237-.007-.866-.012-1.704-2.782.603-3.37-1.34-3.37-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.618.069-.607.069-.607 1.004.07 1.532 1.03 1.532 1.03.89 1.527 2.333 1.086 2.9.827.091-.645.35-1.086.635-1.337-2.22-.253-4.555-1.113-4.555-4.949 0-1.091.39-1.984 1.029-2.682-.103-.253-.446-1.27.098-2.65 0 0 .84-.268 2.75 1.025A9.096 9.096 0 0112 5.093c.85.004 1.7.11 2.493.324 1.909-1.293 2.747-1.025 2.747-1.025.546 1.38.202 2.398.099 2.65.64.698 1.028 1.591 1.028 2.682 0 3.844-2.339 4.693-4.566 4.941.359.307.678.915.678 1.848 0 1.337-.012 2.419-.012 2.747 0 .268.204.578.682.482C21.144 20.197 24 16.442 24 12.017 24 6.484 19.522 2 14 2z" clip-rule="evenodd"></path></svg>
+              GitHub Repo
+            </a>
+          </div>
+        </article>
 
-        <div class="bg-white p-6 rounded-2xl shadow">
-          <h3 class="text-xl font-bold mb-2">Portfolio Website</h3>
-          <p class="mb-2">A digital showcase of work, skills, and experience to attract clients, employers, or collaborators.</p>
-          <p>Let’s try: <a href="https://samarthnagpure-byte.github.io/portfolio/" target="_blank" class="text-blue-500 hover:underline">Download</a></p>
-        </div>
+        <article class="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300">
+          <h3 class="text-2xl font-bold mb-3 text-gray-900">To-Do List (Web App)</h3>
+          <p class="mb-4 text-gray-700 leading-relaxed">A straightforward and efficient web application designed to help users manage and prioritize their daily tasks. It features:</p>
+          <ul class="list-disc list-inside text-gray-600 mb-4 space-y-1">
+            <li>Intuitive interface for **adding and viewing tasks**.</li>
+            <li>**Checkboxes** for easy progress tracking and task completion.</li>
+            <li>Simplifies task management for improved productivity.</li>
+          </ul>
+          <div class="flex flex-wrap gap-3">
+            <a href="https://samarthnagpure-byte.github.io/To-do-list-/" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover-underline-animation font-medium flex items-center">
+                 <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M11 3a1 1 0 100 2h2.07l.386 1.157A2 2 0 0015.424 7H17a1 1 0 100-2h-1.581A4 4 0 0012 3H11zM10 5a1 1 0 100 2h1a1 1 0 100-2h-1zM6 7a1 1 0 100-2h.07A2 2 0 004.576 7H3a1 1 0 100 2h1.581A4 4 0 008 7H6zM5 9a1 1 0 100 2h.07A2 2 0 007.424 13H9a1 1 0 100-2H5zM15 9a1 1 0 100 2h-.07A2 2 0 0012.576 13H11a1 1 0 100-2h4zM10 13a1 1 0 100 2h1a1 1 0 100-2h-1zM6 15a1 1 0 100-2h.07A2 2 0 004.576 15H3a1 1 0 100 2h1.581A4 4 0 008 15H6zM15 15a1 1 0 100-2h-.07A2 2 0 0012.576 15H11a1 1 0 100-2h4zM10 17a1 1 0 100 2h1a1 1 0 100-2h-1z"></path></svg>
+                View Project
+            </a>
+            <a href="https://github.com/Samarthnagpure-byte/To-do-list-/" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover-underline-animation font-medium flex items-center">
+              <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.83 9.504.475.083.677-.217.677-.483 0-.237-.007-.866-.012-1.704-2.782.603-3.37-1.34-3.37-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.618.069-.607.069-.607 1.004.07 1.532 1.03 1.532 1.03.89 1.527 2.333 1.086 2.9.827.091-.645.35-1.086.635-1.337-2.22-.253-4.555-1.113-4.555-4.949 0-1.091.39-1.984 1.029-2.682-.103-.253-.446-1.27.098-2.65 0 0 .84-.268 2.75 1.025A9.096 9.096 0 0112 5.093c.85.004 1.7.11 2.493.324 1.909-1.293 2.747-1.025 2.747-1.025.546 1.38.202 2.398.099 2.65.64.698 1.028 1.591 1.028 2.682 0 3.844-2.339 4.693-4.566 4.941.359.307.678.915.678 1.848 0 1.337-.012 2.419-.012 2.747 0 .268.204.578.682.482C21.144 20.197 24 16.442 24 12.017 24 6.484 19.522 2 14 2z" clip-rule="evenodd"></path></svg>
+              GitHub Repo
+            </a>
+          </div>
+        </article>
 
-        <div class="bg-white p-6 rounded-2xl shadow">
-          <h3 class="text-xl font-bold mb-2">Billing App (for Windows)</h3>
-          <p class="mb-2">A Java Swing-based billing application for laptops, featuring a shopping cart, PDF invoice generation using the iText library, and input validation for user details.</p>
-          <p>Let’s try: <a href="https://github.com/Samarthnagpure-byte" target="_blank" class="text-blue-500 hover:underline">Download</a></p>
-        </div>
-        
+        <article class="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300">
+          <h3 class="text-2xl font-bold mb-3 text-gray-900">Portfolio Website (This Site!)</h3>
+          <p class="mb-4 text-gray-700 leading-relaxed">The very website you're Browse! This project serves as a dynamic digital showcase of my work, skills, and experience, designed to:</p>
+          <ul class="list-disc list-inside text-gray-600 mb-4 space-y-1">
+            <li>Effectively **present my projects and capabilities**.</li>
+            <li>**Attract potential clients, employers, or collaborators**.</li>
+            <li>Demonstrate my proficiency in **front-end web development** (HTML, CSS, Tailwind CSS).</li>
+          </ul>
+          <div class="flex flex-wrap gap-3">
+            <a href="https://samarthnagpure-byte.github.io/portfolio/" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover-underline-animation font-medium flex items-center">
+                 <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M11 3a1 1 0 100 2h2.07l.386 1.157A2 2 0 0015.424 7H17a1 1 0 100-2h-1.581A4 4 0 0012 3H11zM10 5a1 1 0 100 2h1a1 1 0 100-2h-1zM6 7a1 1 0 100-2h.07A2 2 0 004.576 7H3a1 1 0 100 2h1.581A4 4 0 008 7H6zM5 9a1 1 0 100 2h.07A2 2 0 007.424 13H9a1 1 0 100-2H5zM15 9a1 1 0 100 2h-.07A2 2 0 0012.576 13H11a1 1 0 100-2h4zM10 13a1 1 0 100 2h1a1 1 0 100-2h-1zM6 15a1 1 0 100-2h.07A2 2 0 004.576 15H3a1 1 0 100 2h1.581A4 4 0 008 15H6zM15 15a1 1 0 100-2h-.07A2 2 0 0012.576 15H11a1 1 0 100-2h4zM10 17a1 1 0 100 2h1a1 1 0 100-2h-1z"></path></svg>
+                View Live Site
+            </a>
+            <a href="https://github.com/Samarthnagpure-byte/portfolio" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover-underline-animation font-medium flex items-center">
+              <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.83 9.504.475.083.677-.217.677-.483 0-.237-.007-.866-.012-1.704-2.782.603-3.37-1.34-3.37-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.618.069-.607.069-.607 1.004.07 1.532 1.03 1.532 1.03.89 1.527 2.333 1.086 2.9.827.091-.645.35-1.086.635-1.337-2.22-.253-4.555-1.113-4.555-4.949 0-1.091.39-1.984 1.029-2.682-.103-.253-.446-1.27.098-2.65 0 0 .84-.268 2.75 1.025A9.096 9.096 0 0112 5.093c.85.004 1.7.11 2.493.324 1.909-1.293 2.747-1.025 2.747-1.025.546 1.38.202 2.398.099 2.65.64.698 1.028 1.591 1.028 2.682 0 3.844-2.339 4.693-4.566 4.941.359.307.678.915.678 1.848 0 1.337-.012 2.419-.012 2.747 0 .268.204.578.682.482C21.144 20.197 24 16.442 24 12.017 24 6.484 19.522 2 14 2z" clip-rule="evenodd"></path></svg>
+              GitHub Repo
+            </a>
+          </div>
+        </article>
+
+        <article class="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300">
+          <h3 class="text-2xl font-bold mb-3 text-gray-900">Tic-Tac-Toe (Web Game)</h3>
+          <p class="mb-4 text-gray-700 leading-relaxed">A classic **2-player game** implemented as a web application where players take turns marking 'X' or 'O' on a 3x3 grid. The objective is simple:</p>
+          <ul class="list-disc list-inside text-gray-600 mb-4 space-y-1">
+            <li>First player to align three of their marks horizontally, vertically, or diagonally wins.</li>
+            <li>If all spots are filled without a winner, the game results in a draw.</li>
+            <li>A fun demonstration of basic game logic and web interactivity.</li>
+          </ul>
+          <div class="flex flex-wrap gap-3">
+            <a href="https://samarthnagpure-byte.github.io/Tic-Tac-Toe/" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover-underline-animation font-medium flex items-center">
+                 <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M11 3a1 1 0 100 2h2.07l.386 1.157A2 2 0 0015.424 7H17a1 1 0 100-2h-1.581A4 4 0 0012 3H11zM10 5a1 1 0 100 2h1a1 1 0 100-2h-1zM6 7a1 1 0 100-2h.07A2 2 0 004.576 7H3a1 1 0 100 2h1.581A4 4 0 008 7H6zM5 9a1 1 0 100 2h.07A2 2 0 007.424 13H9a1 1 0 100-2H5zM15 9a1 1 0 100 2h-.07A2 2 0 0012.576 13H11a1 1 0 100-2h4zM10 13a1 1 0 100 2h1a1 1 0 100-2h-1zM6 15a1 1 0 100-2h.07A2 2 0 004.576 15H3a1 1 0 100 2h1.581A4 4 0 008 15H6zM15 15a1 1 0 100-2h-.07A2 2 0 0012.576 15H11a1 1 0 100-2h4zM10 17a1 1 0 100 2h1a1 1 0 100-2h-1z"></path></svg>
+                Play Game
+            </a>
+            <a href="https://github.com/Samarthnagpure-byte/Tic-Tac-Toe" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover-underline-animation font-medium flex items-center">
+              <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.83 9.504.475.083.677-.217.677-.483 0-.237-.007-.866-.012-1.704-2.782.603-3.37-1.34-3.37-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.618.069-.607.069-.607 1.004.07 1.532 1.03 1.532 1.03.89 1.527 2.333 1.086 2.9.827.091-.645.35-1.086.635-1.337-2.22-.253-4.555-1.113-4.555-4.949 0-1.091.39-1.984 1.029-2.682-.103-.253-.446-1.27.098-2.65 0 0 .84-.268 2.75 1.025A9.096 9.096 0 0112 5.093c.85.004 1.7.11 2.493.324 1.909-1.293 2.747-1.025 2.747-1.025.546 1.38.202 2.398.099 2.65.64.698 1.028 1.591 1.028 2.682 0 3.844-2.339 4.693-4.566 4.941.359.307.678.915.678 1.848 0 1.337-.012 2.419-.012 2.747 0 .268.204.578.682.482C21.144 20.197 24 16.442 24 12.017 24 6.484 19.522 2 14 2z" clip-rule="evenodd"></path></svg>
+              GitHub Repo
+            </a>
+          </div>
+        </article>
+
       </div>
     </section>
   </main>
 
-  <footer class="bg-white text-center p-4 mt-10 shadow-inner">
-    <p>© 2025 Samarth Nagpure</p>
+  <footer class="bg-gray-800 text-white text-center p-6 mt-12 shadow-inner">
+    <div class="flex justify-center space-x-6 mb-4">
+      <a href="mailto:samarthnagpure47@gmail.com" class="text-blue-300 hover:text-blue-100 transition-colors duration-300 text-lg" aria-label="Email Samarth Nagpure">
+        <span class="font-semibold">Email:</span> samarthnagpure47@gmail.com
+      </a>
+      <a href="https://instagram.com/itx_samarth_56" target="_blank" rel="noopener noreferrer" class="text-blue-300 hover:text-blue-100 transition-colors duration-300 text-lg" aria-label="Samarth Nagpure's Instagram profile">
+        <span class="font-semibold">Instagram:</span> @itx_samarth_56
+      </a>
+      <a href="https://github.com/Samarthnagpure-byte" target="_blank" rel="noopener noreferrer" class="text-blue-300 hover:text-blue-100 transition-colors duration-300 text-lg" aria-label="Samarth Nagpure's GitHub profile">
+        <span class="font-semibold">GitHub:</span> Samarthnagpure-byte
+      </a>
+    </div>
+    <p class="text-gray-400 text-sm">&copy; 2025 Samarth Nagpure. All rights reserved.</p>
   </footer>
 </body>
 </html>
